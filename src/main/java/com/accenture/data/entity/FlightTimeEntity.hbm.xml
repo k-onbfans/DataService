@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.accenture.data.entity.FlightTimeEntity" table="flight_time" schema="integrated_system">
+        <id name="id" column="id"/>
+        <property name="flightNumber" column="flight_number"/>
+        <property name="departureDate" column="departure_date"/>
+        <property name="scheduledDepartureTime" column="scheduled_departure_time"/>
+        <property name="scheduledArrivalTime" column="scheduled_arrival_time"/>
+        <property name="estimatedDepartureTime" column="estimated_departure_time"/>
+        <property name="estimatedArrivalTime" column="estimated_arrival_time"/>
+    </class>
+</hibernate-mapping>
