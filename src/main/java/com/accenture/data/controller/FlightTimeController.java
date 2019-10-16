@@ -28,4 +28,6 @@ public class FlightTimeController {
         FlightTimeEntity flightTimeEntity = flightTimeRepository.findByFlightNumberAndDepartureDate(request.getFlightNumber(),request.getDepartureDate());
         return flightTimeEntity;
     }
+
+
 }

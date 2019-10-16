@@ -1,17 +1,27 @@
 package com.accenture.data.request;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
 import java.sql.Date;
 
-@Setter
-@Getter
-@ToString
+
 public class FindByFlightNumberAndDepartureDateReq {
     private String flightNumber;
 
     private Date departureDate;
+
+    public String getFlightNumber() {
+        return flightNumber;
+    }
+
+    public void setFlightNumber(String flightNumber) {
+        this.flightNumber = flightNumber;
+    }
+
+    public Date getDepartureDate() {
+        return departureDate;
+    }
+
+    public void setDepartureDate(Date departureDate) {
+        this.departureDate = departureDate;
+    }
 }
