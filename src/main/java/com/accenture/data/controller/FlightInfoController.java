@@ -2,8 +2,6 @@ package com.accenture.data.controller;
 
 import com.accenture.data.entity.FlightInfoEntity;
 import com.accenture.data.repository.FlightInfoRepository;
-import com.accenture.data.repository.FlightStatusRepository;
-import com.accenture.data.repository.FlightTimeRepository;
 import com.accenture.data.request.FindByFlightNumberAndDepartureDateReq;
 import com.accenture.data.request.FindByIdReq;
 import com.accenture.data.request.FindByRouteReq;
