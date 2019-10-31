@@ -4,7 +4,7 @@ import com.accenture.data.v1.bean.DepAndArrTime;
 
 import java.sql.Date;
 
-public class FindFlightTimeByFlightNumberRes {
+public class FindFlightTimeRes {
 
     private String flightNumber;
     private Date departureDate;

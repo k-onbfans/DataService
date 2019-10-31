@@ -33,4 +33,6 @@ public class DepAndArrTime {
         this.departureTime = departureTime;
         this.arrivalTime = arrivalTime;
     }
+
+    public DepAndArrTime() {}
 }

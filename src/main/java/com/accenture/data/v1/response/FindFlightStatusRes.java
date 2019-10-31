@@ -2,7 +2,7 @@ package com.accenture.data.v1.response;
 
 import java.sql.Date;
 
-public class FindFlightStatusByFlightNumberRes {
+public class FindFlightStatusRes {
     private String flightNumber;
     private Date departureDate;
     private String status;
