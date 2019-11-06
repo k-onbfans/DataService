@@ -6,6 +6,8 @@ import com.accenture.data.v1.bean.Port;
 import com.accenture.data.v1.response.FindFlightInfoRes;
 import com.accenture.data.v1.response.FindFlightInfosRes;
 import com.accenture.data.v1.service.FlightInfoServiceV1;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,17 +17,27 @@ import java.util.List;
 @Service
 public class FlightInfoServiceV1Impl implements FlightInfoServiceV1 {
 
+    private static final Logger logger = LoggerFactory.getLogger(FlightInfoServiceV1Impl.class);
+
+
     @Autowired
     private FlightInfoRepository flightInfoRepository;
 
     @Override
     public FindFlightInfoRes FindByFlightNumber(String flightNumber) {
+        try {
+
+            Thread.sleep(3000+(long)(Math.random()*7000));
+        }catch (InterruptedException e){
+            logger.error("catch InterruptedException");
+        }
         FlightInfoEntity flightInfoEntity = flightInfoRepository.findByFlightNumber(flightNumber);
         return FlightInfoEntityToFindFlightInfoRes(flightInfoEntity);
     }
 
     @Override
     public FindFlightInfosRes findFlightInfosByPort(Port port) {
+
         List<FlightInfoEntity> list = flightInfoRepository.findByOriginPortAndDestinationPort(port.getOrigin(),port.getDestination());
         List<FindFlightInfoRes> result = new ArrayList<>();
         for (FlightInfoEntity entity:list) {
@@ -35,7 +47,13 @@ public class FlightInfoServiceV1Impl implements FlightInfoServiceV1 {
         return res;
     }
 
-    public FindFlightInfoRes FlightInfoEntityToFindFlightInfoRes(FlightInfoEntity flightInfoEntity){
+    public FindFlightInfoRes FlightInfoEntityToFindFlightInfoRes(FlightInfoEntity flightInfoEntity) {
+        try {
+
+            Thread.sleep(3000+(long)(Math.random()*7000));
+        }catch (InterruptedException e){
+            logger.error("catch InterruptedException");
+        }
         FindFlightInfoRes findByFlightNumberRes = new FindFlightInfoRes();
         findByFlightNumberRes.setAircraft(flightInfoEntity.getAircraft());
         findByFlightNumberRes.setFlightNumber(flightInfoEntity.getFlightNumber());
