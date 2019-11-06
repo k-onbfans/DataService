@@ -1,4 +1,4 @@
-package com.accenture.data.v1.bean;
+package com.accenture.data.bean;
 
 public class Port {
 

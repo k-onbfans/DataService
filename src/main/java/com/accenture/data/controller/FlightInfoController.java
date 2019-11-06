@@ -25,14 +25,13 @@ public class FlightInfoController {
 
     @PostMapping("/findbyid")
     public FlightInfoEntity findById(@RequestBody FindByIdReq req){
-        FlightInfoEntity flightInfoEntity = flightInfoRepository.findById(req.getId());
-        return flightInfoEntity;
+        return flightInfoRepository.findById(req.getId());
     }
 
     @PostMapping("/findbyflightnumberanddeparturedate")
     public FlightInfoEntity findByFlightNumberAndDepartureDate(@RequestBody FindByFlightNumberAndDepartureDateReq request){
-        FlightInfoEntity flightInfoEntity = flightInfoRepository.findByFlightNumber(request.getFlightNumber());
-        return flightInfoEntity;
+        return flightInfoRepository.findByFlightNumber(request.getFlightNumber());
+
     }
 
     @PostMapping("/findbyoriginportanddestinationport")

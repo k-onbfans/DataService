@@ -1,8 +1,9 @@
-package com.accenture.data.v1.response;
+package com.accenture.data.response.v1;
 
-import com.accenture.data.v1.bean.Port;
+import com.accenture.data.bean.Port;
 
 public class FindFlightInfoRes {
+
     private String flightNumber;
     private Port port;
     private String aircraft;

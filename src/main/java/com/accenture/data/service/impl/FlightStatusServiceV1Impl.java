@@ -1,10 +1,10 @@
-package com.accenture.data.v1.service.impl;
+package com.accenture.data.service.impl;
 
 import com.accenture.data.entity.FlightStatusEntity;
 import com.accenture.data.repository.FlightStatusRepository;
 import com.accenture.data.request.FindByFlightNumberAndDepartureDateReq;
-import com.accenture.data.v1.response.FindFlightStatusRes;
-import com.accenture.data.v1.service.FlightStatusServiceV1;
+import com.accenture.data.response.v1.FindFlightStatusRes;
+import com.accenture.data.service.FlightStatusServiceV1;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,15 +1,15 @@
-package com.accenture.data.v1.service.impl;
+package com.accenture.data.service.impl;
 
 import com.accenture.data.entity.FlightTimeEntity;
 import com.accenture.data.repository.FlightTimeRepository;
 import com.accenture.data.request.FindByFlightNumberAndDepartureDateReq;
-import com.accenture.data.v1.bean.DepAndArrTime;
-import com.accenture.data.v1.response.FindFlightTimeRes;
-import com.accenture.data.v1.service.FlightTimeServiceV1;
+import com.accenture.data.bean.DepAndArrTime;
+import com.accenture.data.response.v1.FindFlightTimeRes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.accenture.data.service.FlightTimeServiceV1;
 
 @Service
 public class FlightTimeServiceV1Impl implements FlightTimeServiceV1 {

@@ -1,11 +1,11 @@
-package com.accenture.data.v1.service.impl;
+package com.accenture.data.service.impl;
 
 import com.accenture.data.entity.FlightInfoEntity;
 import com.accenture.data.repository.FlightInfoRepository;
-import com.accenture.data.v1.bean.Port;
-import com.accenture.data.v1.response.FindFlightInfoRes;
-import com.accenture.data.v1.response.FindFlightInfosRes;
-import com.accenture.data.v1.service.FlightInfoServiceV1;
+import com.accenture.data.bean.Port;
+import com.accenture.data.response.v1.FindFlightInfoRes;
+import com.accenture.data.response.v1.FindFlightInfosRes;
+import com.accenture.data.service.FlightInfoServiceV1;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

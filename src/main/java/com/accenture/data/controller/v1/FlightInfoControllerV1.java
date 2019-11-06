@@ -1,9 +1,9 @@
-package com.accenture.data.v1.controller;
+package com.accenture.data.controller.v1;
 
-import com.accenture.data.v1.bean.Port;
-import com.accenture.data.v1.response.FindFlightInfoRes;
-import com.accenture.data.v1.response.FindFlightInfosRes;
-import com.accenture.data.v1.service.FlightInfoServiceV1;
+import com.accenture.data.bean.Port;
+import com.accenture.data.response.v1.FindFlightInfoRes;
+import com.accenture.data.response.v1.FindFlightInfosRes;
+import com.accenture.data.service.FlightInfoServiceV1;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +20,7 @@ public class FlightInfoControllerV1 {
     }
 
     @PostMapping("/port")
-    public FindFlightInfosRes FindFlightInfosByPort(@RequestBody Port port){
+    public FindFlightInfosRes findFlightInfosByPort(@RequestBody Port port){
         return flightInfoServiceV1.findFlightInfosByPort(port);
     }
 }

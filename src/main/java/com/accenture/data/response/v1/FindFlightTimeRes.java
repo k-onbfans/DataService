@@ -1,6 +1,6 @@
-package com.accenture.data.v1.response;
+package com.accenture.data.response.v1;
 
-import com.accenture.data.v1.bean.DepAndArrTime;
+import com.accenture.data.bean.DepAndArrTime;
 
 import java.sql.Date;
 

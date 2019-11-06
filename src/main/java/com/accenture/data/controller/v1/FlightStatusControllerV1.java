@@ -1,8 +1,8 @@
-package com.accenture.data.v1.controller;
+package com.accenture.data.controller.v1;
 
 import com.accenture.data.request.FindByFlightNumberAndDepartureDateReq;
-import com.accenture.data.v1.response.FindFlightStatusRes;
-import com.accenture.data.v1.service.FlightStatusServiceV1;
+import com.accenture.data.response.v1.FindFlightStatusRes;
+import com.accenture.data.service.FlightStatusServiceV1;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

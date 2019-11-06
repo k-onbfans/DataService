@@ -1,4 +1,4 @@
-package com.accenture.data.v1.response;
+package com.accenture.data.response.v1;
 
 import java.sql.Date;
 
