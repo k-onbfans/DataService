@@ -5,6 +5,6 @@ import com.accenture.data.response.v1.FindFlightStatusRes;
 
 public interface FlightStatusServiceV1 {
 
-    public FindFlightStatusRes findByFlightNumber(FindByFlightNumberAndDepartureDateReq findByFlightNumberAndDepartureDateReq);
+    public FindFlightStatusRes findByFlightNumber(FindByFlightNumberAndDepartureDateReq findByFlightNumberAndDepartureDateReq) throws InterruptedException;
 
 }

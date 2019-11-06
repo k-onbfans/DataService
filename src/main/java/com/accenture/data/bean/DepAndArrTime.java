@@ -3,6 +3,7 @@ package com.accenture.data.bean;
 public class DepAndArrTime {
 
     private String departureTime;
+
     private String arrivalTime;
 
     public String getDepartureTime() {

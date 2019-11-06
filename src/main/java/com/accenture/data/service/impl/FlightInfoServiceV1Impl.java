@@ -6,8 +6,6 @@ import com.accenture.data.bean.Port;
 import com.accenture.data.response.v1.FindFlightInfoRes;
 import com.accenture.data.response.v1.FindFlightInfosRes;
 import com.accenture.data.service.FlightInfoServiceV1;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,43 +15,26 @@ import java.util.List;
 @Service
 public class FlightInfoServiceV1Impl implements FlightInfoServiceV1 {
 
-    private static final Logger logger = LoggerFactory.getLogger(FlightInfoServiceV1Impl.class);
-
-
     @Autowired
     private FlightInfoRepository flightInfoRepository;
 
     @Override
-    public FindFlightInfoRes FindByFlightNumber(String flightNumber) {
-        try {
-
-            Thread.sleep(3000+(long)(Math.random()*7000));
-        }catch (InterruptedException e){
-            logger.error("catch InterruptedException");
-        }
+    public FindFlightInfoRes findByFlightNumber(String flightNumber) {
         FlightInfoEntity flightInfoEntity = flightInfoRepository.findByFlightNumber(flightNumber);
-        return FlightInfoEntityToFindFlightInfoRes(flightInfoEntity);
+        return flightInfoEntityToFindFlightInfoRes(flightInfoEntity);
     }
 
     @Override
     public FindFlightInfosRes findFlightInfosByPort(Port port) {
-
         List<FlightInfoEntity> list = flightInfoRepository.findByOriginPortAndDestinationPort(port.getOrigin(),port.getDestination());
         List<FindFlightInfoRes> result = new ArrayList<>();
         for (FlightInfoEntity entity:list) {
-            result.add(FlightInfoEntityToFindFlightInfoRes(entity));
+            result.add(flightInfoEntityToFindFlightInfoRes(entity));
         }
-        FindFlightInfosRes res = new FindFlightInfosRes(result);
-        return res;
+        return new FindFlightInfosRes(result);
     }
 
-    public FindFlightInfoRes FlightInfoEntityToFindFlightInfoRes(FlightInfoEntity flightInfoEntity) {
-        try {
-
-            Thread.sleep(3000+(long)(Math.random()*7000));
-        }catch (InterruptedException e){
-            logger.error("catch InterruptedException");
-        }
+    public FindFlightInfoRes flightInfoEntityToFindFlightInfoRes(FlightInfoEntity flightInfoEntity) {
         FindFlightInfoRes findByFlightNumberRes = new FindFlightInfoRes();
         findByFlightNumberRes.setAircraft(flightInfoEntity.getAircraft());
         findByFlightNumberRes.setFlightNumber(flightInfoEntity.getFlightNumber());

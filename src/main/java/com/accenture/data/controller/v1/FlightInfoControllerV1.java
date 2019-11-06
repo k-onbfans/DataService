@@ -16,11 +16,11 @@ public class FlightInfoControllerV1 {
 
     @GetMapping("/flightnumber/{flightNumber}")
     public FindFlightInfoRes findByFlightNumber(@PathVariable("flightNumber") String flightNumber){
-        return flightInfoServiceV1.FindByFlightNumber(flightNumber);
+        return flightInfoServiceV1.findByFlightNumber(flightNumber);
     }
 
     @PostMapping("/port")
-    public FindFlightInfosRes findFlightInfosByPort(@RequestBody Port port){
+    public FindFlightInfosRes findFlightInfosByPort(@RequestBody Port port) throws InterruptedException {
         return flightInfoServiceV1.findFlightInfosByPort(port);
     }
 }

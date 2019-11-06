@@ -17,7 +17,7 @@ public class FlightTimeControllerV1 {
     private FlightTimeServiceV1 flightTimeServiceV1;
 
     @PostMapping("/byflightnumber")
-    public FindFlightTimeRes findByFlightNumber (@RequestBody FindByFlightNumberAndDepartureDateReq findByFlightNumberAndDepartureDateReq){
+    public FindFlightTimeRes findByFlightNumber (@RequestBody FindByFlightNumberAndDepartureDateReq findByFlightNumberAndDepartureDateReq) throws InterruptedException {
         return flightTimeServiceV1.findByFlightNumber(findByFlightNumberAndDepartureDateReq);
     }
 }

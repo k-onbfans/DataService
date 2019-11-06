@@ -3,7 +3,7 @@ package com.accenture.data.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "flight_info", schema = "integrated_system", catalog = "")
+@Table(name = "flight_info", schema = "integrated_system")
 public class FlightInfoEntity {
     private int id;
     private String flightNumber;
@@ -61,30 +61,5 @@ public class FlightInfoEntity {
         this.aircraft = aircraft;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
 
-        FlightInfoEntity that = (FlightInfoEntity) o;
-
-        if (id != that.id) return false;
-        if (flightNumber != null ? !flightNumber.equals(that.flightNumber) : that.flightNumber != null) return false;
-        if (originPort != null ? !originPort.equals(that.originPort) : that.originPort != null) return false;
-        if (destinationPort != null ? !destinationPort.equals(that.destinationPort) : that.destinationPort != null)
-            return false;
-        if (aircraft != null ? !aircraft.equals(that.aircraft) : that.aircraft != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (flightNumber != null ? flightNumber.hashCode() : 0);
-        result = 31 * result + (originPort != null ? originPort.hashCode() : 0);
-        result = 31 * result + (destinationPort != null ? destinationPort.hashCode() : 0);
-        result = 31 * result + (aircraft != null ? aircraft.hashCode() : 0);
-        return result;
-    }
 }

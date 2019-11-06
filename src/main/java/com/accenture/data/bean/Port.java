@@ -3,6 +3,7 @@ package com.accenture.data.bean;
 public class Port {
 
     private String origin;
+
     private String destination;
 
     public String getOrigin() {

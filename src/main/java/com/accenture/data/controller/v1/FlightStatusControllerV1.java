@@ -17,7 +17,7 @@ public class FlightStatusControllerV1 {
     private FlightStatusServiceV1 flightStatusServiceV1;
 
     @PostMapping("/byflightnumber")
-    public FindFlightStatusRes findByFlightNumber(@RequestBody FindByFlightNumberAndDepartureDateReq request){
+    public FindFlightStatusRes findByFlightNumber(@RequestBody FindByFlightNumberAndDepartureDateReq request) throws InterruptedException {
         return flightStatusServiceV1.findByFlightNumber(request);
     }
 }

@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
-@Table(name = "flight_time", schema = "integrated_system", catalog = "")
+@Table(name = "flight_time", schema = "integrated_system")
 public class FlightTimeEntity {
     private int id;
     private String flightNumber;
@@ -84,38 +84,4 @@ public class FlightTimeEntity {
         this.estimatedArrivalTime = estimatedArrivalTime;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        FlightTimeEntity that = (FlightTimeEntity) o;
-
-        if (id != that.id) return false;
-        if (flightNumber != null ? !flightNumber.equals(that.flightNumber) : that.flightNumber != null) return false;
-        if (departureDate != null ? !departureDate.equals(that.departureDate) : that.departureDate != null)
-            return false;
-        if (scheduledDepartureTime != null ? !scheduledDepartureTime.equals(that.scheduledDepartureTime) : that.scheduledDepartureTime != null)
-            return false;
-        if (scheduledArrivalTime != null ? !scheduledArrivalTime.equals(that.scheduledArrivalTime) : that.scheduledArrivalTime != null)
-            return false;
-        if (estimatedDepartureTime != null ? !estimatedDepartureTime.equals(that.estimatedDepartureTime) : that.estimatedDepartureTime != null)
-            return false;
-        if (estimatedArrivalTime != null ? !estimatedArrivalTime.equals(that.estimatedArrivalTime) : that.estimatedArrivalTime != null)
-            return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (flightNumber != null ? flightNumber.hashCode() : 0);
-        result = 31 * result + (departureDate != null ? departureDate.hashCode() : 0);
-        result = 31 * result + (scheduledDepartureTime != null ? scheduledDepartureTime.hashCode() : 0);
-        result = 31 * result + (scheduledArrivalTime != null ? scheduledArrivalTime.hashCode() : 0);
-        result = 31 * result + (estimatedDepartureTime != null ? estimatedDepartureTime.hashCode() : 0);
-        result = 31 * result + (estimatedArrivalTime != null ? estimatedArrivalTime.hashCode() : 0);
-        return result;
-    }
 }

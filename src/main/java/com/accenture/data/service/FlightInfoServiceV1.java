@@ -6,7 +6,7 @@ import com.accenture.data.response.v1.FindFlightInfosRes;
 
 public interface FlightInfoServiceV1 {
 
-    public FindFlightInfoRes FindByFlightNumber(String flightNumber);
+    public FindFlightInfoRes findByFlightNumber(String flightNumber);
 
-    public FindFlightInfosRes findFlightInfosByPort(Port port);
+    public FindFlightInfosRes findFlightInfosByPort(Port port) throws InterruptedException;
 }
