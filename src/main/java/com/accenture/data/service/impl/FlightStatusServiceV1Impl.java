@@ -16,7 +16,7 @@ public class FlightStatusServiceV1Impl implements FlightStatusServiceV1 {
 
     @Override
     public FindFlightStatusRes findByFlightNumber(FindByFlightNumberAndDepartureDateReq request) throws InterruptedException {
-        Thread.sleep(3000 + (long)(Math.random()*7000));
+//        Thread.sleep(3000 + (long)(Math.random()*7000));
         FlightStatusEntity flightStatusEntity = flightStatusRepository.findByFlightNumberAndDepartureDate(request.getFlightNumber(),request.getDepartureDate());
         FindFlightStatusRes findFlightStatusByFlightNumberRes = new FindFlightStatusRes();
         findFlightStatusByFlightNumberRes.setDepartureDate(flightStatusEntity.getDepartureDate());

@@ -17,7 +17,7 @@ public class FlightTimeServiceV1Impl implements FlightTimeServiceV1 {
 
     @Override
     public FindFlightTimeRes findByFlightNumber(FindByFlightNumberAndDepartureDateReq request) throws InterruptedException {
-        Thread.sleep(3000 + (long)(Math.random()*7000));
+//        Thread.sleep(3000 + (long)(Math.random()*7000));
         FlightTimeEntity flightTimeEntity = flightTimeRepository.findByFlightNumberAndDepartureDate(request.getFlightNumber(),request.getDepartureDate());
         FindFlightTimeRes findFlightTimeByFlightNumberRes = new FindFlightTimeRes();
         findFlightTimeByFlightNumberRes.setFlightNumber(flightTimeEntity.getFlightNumber());
